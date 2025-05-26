@@ -1,9 +1,14 @@
 import { useContext } from "react";
 import AuthContext from "../../Context/AuthContext/AuthContext";
 import GoogleSignIn from "../Google/GoogleSignIn";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const { signInUser } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state || "/";
+
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,6 +19,7 @@ const SignIn = () => {
     signInUser(email, password)
       .then((result) => {
         console.log("signIn successfully", result.user);
+        navigate(from);
       })
       .catch((error) => {
         console.log(error);

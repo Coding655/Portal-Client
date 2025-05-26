@@ -5,18 +5,26 @@ const Banner = () => {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="flex-1 gap-2">
-            <motion.img
-              src="/src/assets/diverse-people-working-office.jpg"
-              className="max-w-sm rounded-lg shadow-2xl rounded-b-xl rounded-l-xl border-t-4 border-r-4"
-              animate={{ x: [50, 150, 40] }}
-              transition={{ duration: 10, delay: 10, repeat: Infinity }}
-            />
           <motion.img
-            src="/src/assets/business-job-interview-concept.jpg"
-            className="max-w-sm rounded-lg shadow-2xl rounded-t-xl rounded-r-xl border-b-4 border-l-4 h-[220px]"
-            animate={{ y: [40, -25, 50] }}
+            src="/src/assets/15834.jpg"
+            className="max-w-md rounded-br-3xl rounded-tl-3xl rounded-tr-3xl border-l-8 border-b-8"
+            animate={{ x: [50, 150, 40] }}
             transition={{ duration: 10, delay: 10, repeat: Infinity }}
           />
+          <div className="flex gap-2 py-2">
+            <motion.img
+              src="/src/assets/15891.jpg"
+              className="max-w-sm rounded-tl-3xl rounded-tr-3xl rounded-br-3xl border-l-8 border-b-8 h-[220px]"
+              animate={{ y: [50, -25, 50] }}
+              transition={{ duration: 10, delay: 10, repeat: Infinity }}
+            />
+            <motion.img
+              src="/src/assets/15891.jpg"
+              className="max-w-sm rounded-tr-3xl rounded-tl-3xl rounded-br-3xl border-b-8 border-l-8 h-[220px]"
+              animate={{ y: [50, -50, 70] }}
+              transition={{ duration: 10, delay: 10, repeat: Infinity }}
+            />
+          </div>
         </div>
         <div className="flex-1">
           <motion.h1
@@ -50,7 +58,18 @@ const Banner = () => {
             recommendations, and real-time application tracking. We believe
             finding the right job should be as easy as finding your next meal.
           </motion.p>
-          <button className="btn btn-primary">Explore Now!</button>
+          <div>
+            <h2 className="flex gap-2 font-medium">
+              Popular Searches:{" "}
+              <span className="link  text-sm text-gray-400">Designer,</span>
+              <span className="link text-sm text-gray-400">Web,</span>
+              <span className="link text-sm text-gray-400">IOS,</span>
+              <span className="link text-sm text-gray-400">Developer,</span>
+              <span className="link text-sm text-gray-400">PHP,</span>
+              <span className="link text-sm text-gray-400">Senior,</span>
+              <span className="link text-sm text-gray-400">Engineer</span>
+            </h2>
+          </div>
         </div>
       </div>
     </div>
