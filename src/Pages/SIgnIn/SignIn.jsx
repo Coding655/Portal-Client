@@ -7,7 +7,7 @@ const SignIn = () => {
   const { signInUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state || "/";
+  const from = location?.state || "/";
 
   const handleSignIn = (e) => {
     e.preventDefault();

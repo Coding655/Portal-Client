@@ -17,9 +17,14 @@ const Navbar = () => {
           Home
         </button>
       </Link>
-      <Link to="/services">
+      <Link to="/myApplication">
         <button className="focus:ring-2 hover:text-blue-600 focus:text-blue-600 rounded-full p-2 relative hover:top-[-2px]">
-          Services
+          MyApplications
+        </button>
+      </Link>
+      <Link to="/addJob">
+        <button className="focus:ring-2 hover:text-blue-600 focus:text-blue-600 rounded-full p-2 relative hover:top-[-2px]">
+          Add Job
         </button>
       </Link>
       <Link to="/blog">
